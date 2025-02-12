@@ -19,15 +19,15 @@ Para esta práctica, se implementaron dos métodos de convolución. El primero f
 
  ![Imagen de WhatsApp 2025-02-11 a las 19 24 51_c2fabe90](https://github.com/user-attachments/assets/cb486130-b8f4-4a3e-b66c-0c092e963774)
 
- Dentro de la imagen se puede observar el calculo de la convolución realizado como una multiplicación de polinomios, seguido de otro método el cual se basa en una serie de multiplicaciones tipo tabla, en ambos casos se llego al mismo resultado. Finalmente al inferior de la página se encuentra la gráfica manual de la señal (2)  y del sistema (2) correspondientes al primer estudiante.
+ Dentro de la imagen se puede observar el calculo de la convolución realizado como una multiplicación de polinomios, seguido de otro método el cual se basa en una serie de multiplicaciones tipo tabla, en ambos casos se llego al mismo resultado. Finalmente al inferior de la página se encuentra la gráfica manual de la señal (1)  y del sistema (1) correspondientes al primer estudiante.
 
    ![Imagen de WhatsApp 2025-02-11 a las 19 24 51_1086e93e](https://github.com/user-attachments/assets/0fef8329-2bdc-4be2-8e71-57712c34014b)
 
  La imagen demuestra el resultado de la convolución entre el sistema y la señal del primer caso.
 
-Para el caso del segundo estudiante se realizo el mismo proceso pero solo implementando el método tipo tabla, al igual que en el caso anterior se gráfica la señal (1)y el sistema (1)
+Para el caso del segundo estudiante se realizo el mismo proceso pero solo implementando el método tipo tabla, al igual que en el caso anterior se gráfica la señal (2) y el sistema (2)
 
-  ![Imagen de WhatsApp 2025-02-11 a las 19 24 51_1086e93e](https://github.com/user-attachments/assets/0ae492df-230c-444b-974d-9c9dc8363f69)
+   ![Imagen de WhatsApp 2025-02-11 a las 19 45 19_f2f5c492](https://github.com/user-attachments/assets/526e70f3-d48f-4f2c-a92b-99d074c8d801)
 
  
 
