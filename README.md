@@ -218,9 +218,9 @@ La Transformada de Fourier descompone una señal en sus componentes de frecuenci
 
 ```bash
 #Se cre la transformada de Fourier
-N = len(emg)
-frecuencias = np.fft.fftfreq(N, d=1/fs)
-trs_magnitud = np.abs(np.fft.fft(emg))
+N = len(emg) # Donde N es la cantidad de muestras de la señal.
+frecuencias = np.fft.fftfreq(N, d=1/fs)  # a partir de la funcion ftt se calculan las frecuencias asociadas
+trs_magnitud = np.abs(np.fft.fft(emg)) # np.fft.fft es una función que calcula la FFT de la señal EMG, obteniendo un arreglo complejo con información de amplitud y fase y np.abs decarta la oarte imaginaria.
 
 #Se grafica la transformada de Fourier con respecto a la señal EMG
 plt.figure(figsize=(10, 4),facecolor='linen')
