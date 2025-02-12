@@ -274,3 +274,7 @@ print(f"Mediana: {medianafreq}")
 print(f"Desvación estándar: {desvifreq}")
 
 ```
+
+- Estadisticos de frecuencia:
+
+  ![image](https://github.com/user-attachments/assets/2fe4101a-5f95-4488-a977-8de9e557dbae)
