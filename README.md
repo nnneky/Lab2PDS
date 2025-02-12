@@ -338,9 +338,9 @@ plt.show()
 
 La densidad espectral se puede definir cómo  se distribuye la potencia o energía de una señal en el dominio de la frecuencia, aplicando en Python se realizó de la siguiente manera.
 ```bash
-frecuen_psd, psd= welch(emg, fs, nperseg=(4000))
+frecuen_psd, psd= welch(emg, fs, nperseg=(4000)) # la función  nperseg=4000 define el numero de puntos en cada segmento de la señal antes de calcular la tff.
 plt.figure(figsize=(10, 4),facecolor='linen')
-plt.semilogy(frecuen_psd, psd,label="Densidad Espectral",color='indianred' )
+plt.semilogy(frecuen_psd, psd,label="Densidad Espectral",color='indianred' ) #eta linea graficas la desnidad espectral en escala logarítmica en el eje y para que se aprecie con amyor "nitidez"
 plt.xlabel("Frecuencia [Hz]", color='darkslategray')
 plt.ylabel("Densidad de potencia" , color='darkslategray')
 plt.title("Densidad Espectral de la señal", color='darkslategray')
@@ -356,12 +356,12 @@ plt.show()
 En el dominio de la frecuencia los estadisticos tales como la media, la mediana y la desviación estandar se calcularon de la siguiente manera:
 
 ```bash
-especpot= trs_magnitud **2
-ptotal= np.sum(especpot)
+especpot= trs_magnitud **2  # Calcula la potencia espectral
+ptotal= np.sum(especpot) # 2Calcula la potencia total del espectro
 
-medfreq= np.sum(frecuencias * especpot) / ptotal
-medianafreq= frecuencias[np.searchsorted(np.cumsum(especpot), ptotal/2)]               
-desvifreq= np.sqrt(np.sum((frecuencias - medfreq)**2*especpot)/ptotal)              
+medfreq= np.sum(frecuencias * especpot) / ptotal  # Esta línea calcula la frecuencia media que representa el centro de masa del espectro de potencia
+medianafreq= frecuencias[np.searchsorted(np.cumsum(especpot), ptotal/2)] # la funciónnp.cumsum Calcula la suma acumulativa de la potencia espectral y la función np.searchsorted encuentra el índice donde la suma acumulada alcanza el 50% de la potencia total.              
+desvifreq= np.sqrt(np.sum((frecuencias - medfreq)**2*especpot)/ptotal) # esta  parte calcula la desviación estándar espectral.  a partir de raíz cuadrada            
 
 print("Estadísticos con Frecuencia:")
 print(f"Media: {medfreq}")
