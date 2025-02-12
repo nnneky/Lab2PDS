@@ -13,8 +13,15 @@ El procesamiento de señales utiliza herramientas clave como la convolución, qu
 - IPython.display
 
 ##  Convolución:
-Es una operación matemática que combina dos señales para obtener una tercera, representando cómo una afecta a la otra, en python se representó de la siguiente manera con los valores solicitados en la guía: 
+##  Convolución:
+La convolución es una operación que muestra cómo una señal interactúa con un sistema. En procesamiento de señales, se usa para calcular la salida de un sistema cuando se le aplica una entrada, ayudando a entender cómo el sistema afecta a la señal.
 
+Para esta práctica, se implementaron dos métodos de convolución. El primero fue calculado y escrito a mano, como se muestra a continuación:
+
+ ![Imagen de WhatsApp 2025-02-11 a las 19 24 51_c2fabe90](https://github.com/user-attachments/assets/cb486130-b8f4-4a3e-b66c-0c092e963774)
+
+ Dentro de la imagen se puede observar el calculo de la convolución realizado como una multiplicación de polinomios, seguido de otro método el cual se basa en una serie de multiplicaciones tipo tabla, en ambos casos se llego al mismo resultado. Finalmente al inferior de la página se encuentra la gráfica manual de la señal (2)  y del sistema (2) correspondientes al primer estudiante.
+ 
 ```bash
  
 h = np.array([5,6,0,0,7,7,8]) #Señal de entrada [Código de estudiante]
