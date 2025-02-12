@@ -60,20 +60,23 @@ nx = np.arange(len(x))
 ny = np.arange(len(y))
 ```
 
-Y de esta manera quedó graficado:
+Luego se gráfica cada elemento de la siguiente forma:
 
 ```bash
+
+## gráfico del primer sistema
+plt.figure(figsize=(10, 4),facecolor='linen') ## se crea una figura del tamaño deseado 
+
+plt.plot(nh, h, color='maroon') ## se definen las variables que deberá gráficar cada eje y el color seleccionado
+plt.title('Señal h[n]  |Código Daniel|',color='darkslategray') ## titulo del gráfico
+plt.xlabel('n' , color='darkslategray') ## titulo del eje x
+plt.ylabel('Amplitud', color='darkslategray') ## titulo del eje y 
+plt.grid () 
+plt.show() ## mostrar la figura 
+
+## gráfico de la primera señal, se realiza de la misma forma que la primera figura
+
 plt.figure(figsize=(10, 4),facecolor='linen')
-
-plt.plot(nh, h, color='maroon')
-plt.title('Señal h[n]  |Código Daniel|',color='darkslategray')
-plt.xlabel('n' , color='darkslategray')
-plt.ylabel('Amplitud', color='darkslategray')
-plt.grid ()
-plt.show() 
-
-plt.figure(figsize=(10, 4),facecolor='linen')
-
 plt.plot(nx, x, color='maroon')
 plt.title('Señal x[n]  |C.C Daniel|',color='darkslategray')
 plt.xlabel('n',color='darkslategray')
@@ -81,8 +84,8 @@ plt.ylabel('Amplitud',color='darkslategray')
 plt.grid ()
 plt.show()  
 
+## gráfico de la primera convolución, se realiza de la misma forma que la primera figura
 plt.figure(figsize=(10, 4),facecolor='linen')
-
 plt.plot(ny, y, color='maroon')
 plt.title('Señal y[n]=h[n] * x[n]  |Daniel|',color='darkslategray')
 plt.xlabel('n',color='darkslategray')
@@ -90,8 +93,8 @@ plt.ylabel('Amplitud',color='darkslategray')
 plt.grid ()
 plt.show()
 
+## gráfico del segundo sistema, se realiza de la misma forma que la primera figura
 plt.figure(figsize=(10, 4),facecolor='linen')
-
 plt.plot(npx, p, color='maroon')
 plt.title('Señal p[n]  |Código Isabel|',color='darkslategray')
 plt.xlabel('n' , color='darkslategray')
@@ -99,8 +102,8 @@ plt.ylabel('Amplitud', color='darkslategray')
 plt.grid ()
 plt.show() 
 
+## gráfico de la segunda señal, se realiza de la misma forma que la primera figura
 plt.figure(figsize=(10, 4),facecolor='linen')
-
 plt.plot(ni, i, color='maroon')
 plt.title('Señal i[n]  |C.C Isabel|',color='darkslategray')
 plt.xlabel('n',color='darkslategray')
@@ -108,8 +111,8 @@ plt.ylabel('Amplitud',color='darkslategray')
 plt.grid ()
 plt.show()  
 
+## gráfico de la segunda convolución, se realiza de la misma forma que la primera figura
 plt.figure(figsize=(10, 4),facecolor='linen')
-
 plt.plot(nyy, yy, color='maroon')
 plt.title('Señal yy[n]=h[n] * x[n]  |Isabel|',color='darkslategray')
 plt.xlabel('n',color='darkslategray')
@@ -117,6 +120,7 @@ plt.ylabel('Amplitud',color='darkslategray')
 plt.grid ()
 plt.show()
 ```
+
 # Gráficas de las convuluciones:
 
 - Usando los datos de Daniel
