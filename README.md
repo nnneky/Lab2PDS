@@ -138,6 +138,62 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/5a3d5b70-ba0d-4213-8c31-b335a684d813)
 
 ![image](https://github.com/user-attachments/assets/b3fc2cbd-7c5b-45b2-8498-57e572f8a2d3)
+
+## Animar las convoluciones de forma secuencial:
+
+Para este indice de la guía se realizo una función que crea secuencialmente una serie de gráficos que ejemplifican el proceso de convolución, esto se realizo de la siguiente forma:
+```bash
+def animar_convolucion(x_signal, c_signal, y_signal, titulo): ## se crea una función con parametros necesarios (señal,sistema,resultado de la convolución y el tiyulo deseado)
+    len_x = len(x_signal) ## aquí definimos el tamaño de cada componente basandonos en los datos de estrada de la función para todos los casos
+    len_c = len(c_signal)
+    len_y = len(y_signal)
+    plt.figure(figsize=(10, 6)) ## se crea una figura de tamaño deseado
+
+    for i in range(len_y): ## Se inicia un bucle que recorre cada muestra de la señal convolucionada para este caso y[n]
+        plt.clf() ## borra la gráfica anterior para actualizarla en cada paso.
+
+        # Graficar x[n]
+        plt.subplot(3, 1, 1) ## Primera subgráfica de 3 filas.
+        plt.stem(np.arange(len_x), x_signal, linefmt='b-', markerfmt='bo', basefmt="black") ## Gráfica de señal discreta x [n] con parametros de color 
+        plt.title(f"{titulo} - Señal de Entrada x[n]") ## titulo de esa zona de la animación
+        plt.xlabel("n") ## eje x
+        plt.grid()
+
+        # Graficar c[n] desplazado correctamente
+        plt.subplot(3, 1, 2) ## segunda subgráfica
+        ## Se calcula el desplazamiento de h[n] para simular el proceso de convolución:
+        inicio = max(0, i - len_c + 1)  # Controla el desplazamiento del sistema (cuanto se debe desplazar h[n])
+        desplazamiento = np.zeros(inicio) ## Agrega ceros al inicio del sistema.
+        c_desplazado = np.concatenate([desplazamiento, c_signal])[:i+1] ## Ajusta la longitud del sistema en cada iteración. concatenando los valores de la señal con los ceros, lo que quiere decir que se va desplazando agregando ceros a la izquierda
+        plt.stem(np.arange(i+1), c_desplazado, linefmt='r-', markerfmt='ro', basefmt="black") ## ayuda a gráficar la señal desplazada 
+        plt.title(f"{titulo} - Sistema c[n] desplazado (Paso {i+1})") ## titulo del sub gráfico
+        plt.xlabel("n")
+        plt.grid() ## añade una rejilla para la figura 
+
+        # Graficar y[n] acumulado correctamente
+        plt.subplot(3, 1, 3) ## tercer subgráfico
+        plt.stem(np.arange(i + 1), y_signal[:i + 1], linefmt='g-', markerfmt='go', basefmt="black") ## se muestra la señal acomulando valores por cada vez
+        plt.title(f"{titulo} - Salida y[n] acumulada")
+        plt.xlabel("n")
+        plt.grid()
+
+        plt.tight_layout()
+        
+        # Mostrar la animación correctamente
+        clear_output(wait=True)  # Borra la gráfica anterior
+        display(plt.gcf())  # Muestra la nueva gráfica
+        time.sleep(0.3)  # Pausa breve para animación fluida
+
+    # Limpiar la última iteración
+    clear_output(wait=True)
+
+# -------------------- ANIMACIÓN PARA DANIEL --------------------
+animar_convolucion(h, x, y, "Convolución Daniel")  ## envia los parametros a la función 
+
+# -------------------- ANIMACIÓN PARA ISABEL --------------------
+animar_convolucion(p, i, yy, "Convolución Isabel")
+
+```
 ## Señal electromiográfica de Physionet
 Se eligió la señal EMG "emg_healthym" con duración de 10segundos en  PhysioNet, y se descargaron los archivos .info y .mat para su análisis. La electromiografía se tomó de un paciente masculino de 44 años sin antecedentes de enfermedad neuromuscular siendo así una EMG de electrodo de aguja concéntrico de 25 mm colocado en el músculo tibial anterior
 El paciente dorsiflexionó el pie suavemente contra resistencia y luego lo relajó, todo esto se sabe gracias a la información que nos proporciona la pagina de Physionet.
