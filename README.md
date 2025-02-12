@@ -439,6 +439,8 @@ print(f"Desvación estándar: {desvifreq}")
 
   ![image](https://github.com/user-attachments/assets/2fe4101a-5f95-4488-a977-8de9e557dbae)
 
+Estos valores indican que la señal EMG tiene una amplia distribución de frecuencias, con la mayoría concentradas alrededor de 1643 Hz y una gran variabilidad en el espectro.
+
 
   ## Histograma de frecuencias
 
