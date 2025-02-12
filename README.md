@@ -285,9 +285,9 @@ print("Valores de la correlación cruzada:") ## imprime valor a valor de la corr
 print(correlacion)
 ```
 
+![image](https://github.com/user-attachments/assets/91fbd1ef-a42c-4fcd-8997-957fc3c13038)
 
-
-
+El análisis de correlación entre x1 [n] y x2 [n] muestra que son ondas sinusoidales ortogonales, es decir, están desfasadas 90° (π/2 radianes). Cuando no hay desplazamiento (lag=0), la correlación es cercana a cero, lo que confirma que están desfasadas. Sin embargo, al mover una de las señales en el tiempo, su similitud aumenta, alcanzando valores altos y bajos en ciertos desplazamientos.
 
 ## Señal electromiográfica de Physionet
 Se eligió la señal EMG "emg_healthym" con duración de 10segundos en  PhysioNet, y se descargaron los archivos .info y .mat para su análisis. La electromiografía se tomó de un paciente masculino de 44 años sin antecedentes de enfermedad neuromuscular siendo así una EMG de electrodo de aguja concéntrico de 25 mm colocado en el músculo tibial anterior
