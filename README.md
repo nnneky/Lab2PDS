@@ -460,6 +460,13 @@ A continuación se muestra el resultado del histograma:
 ![image](https://github.com/user-attachments/assets/509be939-7af4-4179-8454-acbf3f2d06da)
 
 
+# Bibliográfia
+
+- La totalidad de imagenes y gráficas del documento son de autoria propia de los integrantes del grupo, estas fueron generadas por la interfaz de python.
+- La señal utilizada fue sustraida del banco libre de datos de physionet https://physionet.org
+-  libreria numpy https://numpy.org/doc/stable/
+-  libreria matplotlib Hunter, J. D. (2007). Matplotlib: A 2D Graphics Environment. Computing in Science & Engineering, 9(3), 90-95.
+
 
 
 
