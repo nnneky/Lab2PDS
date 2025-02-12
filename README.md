@@ -194,6 +194,30 @@ animar_convolucion(h, x, y, "Convolución Daniel")  ## envia los parametros a la
 animar_convolucion(p, i, yy, "Convolución Isabel")
 
 ```
+A continuación mostraremos algunas de las imagenes mostradas por la secuencia gráfica generada, por cuestón de extención del repositorio no las enunciaremos todas, ya que son bastantes, al compilar el código se podra observar de forma más clara.Para ambas convoluciones se relizó el procedimiento pero  aquí expondremos solo fragmentos del primer resultado:
+
+#### primera imagen de la secuencia gráfica:
+
+![image](https://github.com/user-attachments/assets/5576c1c5-784a-42a6-8239-66c7d223feb7)
+
+#### Avance de la secuencia
+
+![image](https://github.com/user-attachments/assets/af481f50-bca8-4595-b144-24d85e919b1a)
+
+
+![image](https://github.com/user-attachments/assets/220ca855-6d86-4319-98b0-7e876aa08b2e)
+
+
+![image](https://github.com/user-attachments/assets/dd2a58dc-bc26-49eb-bfc6-8c95dcc139dd)
+
+#### Final de la secuencia
+
+![image](https://github.com/user-attachments/assets/a3a71928-9aed-4f40-b2d5-e21be0165457)
+
+
+
+
+
 ## Señal electromiográfica de Physionet
 Se eligió la señal EMG "emg_healthym" con duración de 10segundos en  PhysioNet, y se descargaron los archivos .info y .mat para su análisis. La electromiografía se tomó de un paciente masculino de 44 años sin antecedentes de enfermedad neuromuscular siendo así una EMG de electrodo de aguja concéntrico de 25 mm colocado en el músculo tibial anterior
 El paciente dorsiflexionó el pie suavemente contra resistencia y luego lo relajó, todo esto se sabe gracias a la información que nos proporciona la pagina de Physionet.
