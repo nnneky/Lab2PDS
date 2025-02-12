@@ -225,6 +225,66 @@ A continuación mostraremos algunas de las imagenes mostradas por la secuencia g
 
 ![image](https://github.com/user-attachments/assets/a3a71928-9aed-4f40-b2d5-e21be0165457)
 
+## Correlación
+
+La correlación entre dos señales mide el grado de similitud o relación entre ellas en diferentes desplazamientos en el tiempo. Es una herramienta fundamental en el procesamiento de señales para encontrar patrones, alineaciones o detectar señales en presencia de ruido.
+
+En marco a lo propuesto en la práctica se realizo una correlación cruzada la cual es la correlación entre dos señales diferentes y Se usa para medir cuánto se parecen dos señales en diferentes instantes de tiempo.
+
+Lo anterior se realizó con el sigueinte código en phyton:
+
+```bash
+# Definimos parámetros
+Fs = 1 / (1.25e-3)  # Frecuencia de muestreo = 1 / Ts de finido por la guía 
+Ts = 1 / Fs         # Periodo de muestreo
+f = 100             # Frecuencia de la señal
+n = np.arange(0, 9) # Valores de n
+
+# Definimos las señales estipuladas en la guía entre ambas presentan un desface de pi/2
+x1 = np.cos(2 * np.pi * f * n * Ts) 
+x2 = np.sin(2 * np.pi * f * n * Ts)
+
+# Calculamos la correlación cruzada
+correlacion = np.correlate(x1, x2, mode="full") ## mediante una función de numpy se cálcula la correlación , se usa full para que se devuelvan todos las posibles alineaciones de x1 y x2 
+lags = np.arange(-len(x1) + 1, len(x1)) ## Crea los valores de desplazamiento (lags) correspondientes a la correlación, representa los distintos desplazamientos con los que x1 y x2 se comparan en la correlación.
+
+# GRAFICAMOS LAS SEÑALES 
+plt.figure(figsize=(12, 6)) 
+# Gráfico de x1[n]
+plt.subplot(3, 1, 1) ## primer subgráfico
+plt.stem(n, x1, linefmt='b-', markerfmt='bo', basefmt="black", label="x1[n] = cos(2π100nTs)") ## se gráfica la primera señal
+plt.xlabel("n")
+plt.ylabel("Amplitud")
+plt.title("Señal x1[n]")
+plt.grid()
+plt.legend()
+
+# Gráfico de x2[n]
+plt.subplot(3, 1, 2) ## segundo subgráfico
+plt.stem(n, x2, linefmt='r-', markerfmt='ro', basefmt="black", label="x2[n] = sin(2π100nTs)") ## se gráfica la segunda señal
+plt.xlabel("n")
+plt.ylabel("Amplitud")
+plt.title("Señal x2[n]")
+plt.grid()
+plt.legend()
+
+# Gráfico de la correlación
+plt.subplot(3, 1, 3) ## tercer subgráfico
+plt.stem(lags, correlacion, linefmt='g-', markerfmt='go', basefmt="black", label="Correlación x1[n] y x2[n]") ## se gráfica la correlación
+plt.xlabel("Desplazamiento (lags)")
+plt.ylabel("Amplitud")
+plt.title("Correlación Cruzada entre x1[n] y x2[n]")
+plt.grid()
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+# Imprimir resultados
+print("Valores de la correlación cruzada:") ## imprime valor a valor de la correlación 
+print(correlacion)
+```
+
 
 
 
