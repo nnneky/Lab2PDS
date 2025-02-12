@@ -25,9 +25,12 @@ Para esta práctica, se implementaron dos métodos de convolución. El primero f
 
  La imagen demuestra el resultado de la convolución entre el sistema y la señal del primer caso.
 
-Para el caso del segundo estudiante se realizo el mismo proceso pero solo implementando el método tipo tabla, al igual que en el caso anterior se gráfica la señal (2) y el sistema (2)
+Para el caso del segundo estudiante se realizo el mismo proceso pero solo implementando el método tipo tabla, al igual que en el anteriormente se gráfica la señal (2) y el sistema (2)
 
    ![Imagen de WhatsApp 2025-02-11 a las 19 45 19_f2f5c492](https://github.com/user-attachments/assets/526e70f3-d48f-4f2c-a92b-99d074c8d801)
+
+finalmente se gráfica la convolución entre la señal y el sistema obteniendo lo siguiente:
+ ![Imagen de WhatsApp 2025-02-11 a las 19 45 34_76ac0a06](https://github.com/user-attachments/assets/1f3d4c34-d7fb-4c89-ac60-844f8dc834ad)
 
  
 
