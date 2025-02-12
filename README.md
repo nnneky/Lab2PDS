@@ -1,6 +1,7 @@
 # Laboratorio 2 PDS
+
 ## Introducción:
-El procesamiento de señales emplea herramientas clave para su análisis y manipulación. La convolución modela la interacción entre una señal y un sistema , la correlación mide la similitud entre señales, y la transformada permite su estudio en el dominio de la frecuencia. Acá encontramos la manera correcta de emplear todo esto en la aplicación de Python ayudandonos así a entender de manera más profunda el tema
+El procesamiento de señales utiliza herramientas clave como la convolución, que modela la interacción entre una señal y un sistema; la correlación, que mide la similitud entre señales; y la transformada, que permite analizar las señales en el dominio de la frecuencia. Estas técnicas, implementadas en Python, facilitan un análisis más profundo y práctico del tema.
 
 ## Requerimientos:
 - Interfaz de python (para este caso 3.12)
@@ -8,6 +9,8 @@ El procesamiento de señales emplea herramientas clave para su análisis y manip
 - Matplotlib
 - Scipy.io
 - Scipy.interpolate
+- libreria time
+- IPython.display
 
 ##  Convolución:
 Es una operación matemática que combina dos señales para obtener una tercera, representando cómo una afecta a la otra, en python se representó de la siguiente manera con los valores solicitados en la guía: 
