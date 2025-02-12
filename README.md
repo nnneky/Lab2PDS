@@ -30,32 +30,34 @@ Para el caso del segundo estudiante se realizo el mismo proceso pero solo implem
    ![Imagen de WhatsApp 2025-02-11 a las 19 45 19_f2f5c492](https://github.com/user-attachments/assets/526e70f3-d48f-4f2c-a92b-99d074c8d801)
 
 finalmente se gráfica la convolución entre la señal y el sistema obteniendo lo siguiente:
+
  ![Imagen de WhatsApp 2025-02-11 a las 19 45 34_76ac0a06](https://github.com/user-attachments/assets/1f3d4c34-d7fb-4c89-ac60-844f8dc834ad)
 
- 
+como segundo método propuesto por la guía, se realizo la convolución mediante funciones en phython,ademas de obtener una secuencia de la misma en cada caso.
 
- 
+La programación de lo enunciado es la siguiente: 
+
 ```bash
  
-h = np.array([5,6,0,0,7,7,8]) #Señal de entrada [Código de estudiante]
+h = np.array([5,6,0,0,7,7,8]) #Señal de entrada [Código de estudiante] se crea un arreglo de valores para ambos casos
 x = np.array([1,0,7,6,2,4,2,2,3,7]) #Señal de salida [C.C]
 
-p = np.array([5,6,0,0,7,8,6]) 
+p = np.array([5,6,0,0,7,8,6]) ## al igual que arriba, se crea un arreglo de valores 
 i = np.array([1,0,2,7,1,5,1,0,7,8])
 
 #Se calcula la convolución.
-y = np.convolve(h, x) 
+y = np.convolve(h, x) ## mediante una función de numpy se calcula la convolución y se almacena en una variable
 yy=  np.convolve(p, i)
 
 #Índices de señales.
-npx = np.arange(len(p))
-ni = np.arange(len(i))
-nyy = np.arange(len(yy))
+npx = np.arange(len(p)) ## Genera un arreglo de índices desde 0 hasta el tamaño de p -1 , utilizado para graficar p.
+ni = np.arange(len(i)) ##  Genera los índices de la señal i (obtiene la cantidad de elementos de la señal - 1)
+nyy = np.arange(len(yy)) ## genera un arreglo con tamaño yy-1
 
-nh = np.arange(len(h))
+## mismo proceso que la señal anterior
+nh = np.arange(len(h)) 
 nx = np.arange(len(x))
 ny = np.arange(len(y))
-
 ```
 
 Y de esta manera quedó graficado:
