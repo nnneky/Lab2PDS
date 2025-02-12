@@ -433,3 +433,22 @@ print(f"Desvación estándar: {desvifreq}")
 - Estadisticos de frecuencia:
 
   ![image](https://github.com/user-attachments/assets/2fe4101a-5f95-4488-a977-8de9e557dbae)
+
+
+  ## Histograma de frecuencias
+
+Para la construcción del histograma se realizó mediante funciones, como se muestra a continuación:
+
+  ```bash 
+plt.figure(figsize=(10, 4), facecolor='beige') ## se crea una figura de tamaño y color deseado
+plt.hist(frecuencias[:N//2], bins=50, weights=trs_magnitud[:N//2], color='coral', alpha=0.7, edgecolor='maroon') ## dibuja un histograma a partir de los datos a partir de las frecuencias positivas generadas por la transformada, weights=trs_magnitud[:N//2]=Pondera el histograma con los valores de magnitud de la FFT, para que cada barra refleje cuánta energía hay en cada frecuencia.
+plt.xlabel("Frecuencia [Hz]", color='red')
+plt.ylabel("Magnitud", color='red')
+plt.title("Histograma de Frecuencias de la Transformada de Fourier", color='red')
+plt.grid()
+plt.show()
+  ```
+A continuación se muestra el resultado del histograma:
+
+
+
