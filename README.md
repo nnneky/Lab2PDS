@@ -235,3 +235,20 @@ plt.show()
   ![image](https://github.com/user-attachments/assets/3baf40d8-9243-4bf7-bd9e-38ada01d31e3)
 
 
+## Estadisticos en función de la frecuencia:
+En el dominio de la frecuencia los estadisticos tales como la media, la mediana y la desviación estandar se calcularon de la siguiente manera:
+
+```bash
+especpot= trs_magnitud **2
+ptotal= np.sum(especpot)
+
+medfreq= np.sum(frecuencias * especpot) / ptotal
+medianafreq= frecuencias[np.searchsorted(np.cumsum(especpot), ptotal/2)]               
+desvifreq= np.sqrt(np.sum((frecuencias - medfreq)**2*especpot)/ptotal)              
+
+print("Estadísticos con Frecuencia:")
+print(f"Media: {medfreq}")
+print(f"Mediana: {medianafreq}")
+print(f"Desvación estándar: {desvifreq}")
+
+```
