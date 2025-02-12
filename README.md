@@ -450,5 +450,9 @@ plt.show()
   ```
 A continuación se muestra el resultado del histograma:
 
+![image](https://github.com/user-attachments/assets/509be939-7af4-4179-8454-acbf3f2d06da)
+
+
+
 
 
