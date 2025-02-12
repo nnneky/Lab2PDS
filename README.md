@@ -290,6 +290,7 @@ print(correlacion)
 El análisis de correlación entre x1 [n] y x2 [n] muestra que son ondas sinusoidales ortogonales, es decir, están desfasadas 90° (π/2 radianes). Cuando no hay desplazamiento (lag=0), la correlación es cercana a cero, lo que confirma que están desfasadas. Sin embargo, al mover una de las señales en el tiempo, su similitud aumenta, alcanzando valores altos y bajos en ciertos desplazamientos.
 
 ## Señal electromiográfica de Physionet
+
 Se eligió la señal EMG "emg_healthym" con duración de 10segundos en  PhysioNet, y se descargaron los archivos .info y .mat para su análisis. La electromiografía se tomó de un paciente masculino de 44 años sin antecedentes de enfermedad neuromuscular siendo así una EMG de electrodo de aguja concéntrico de 25 mm colocado en el músculo tibial anterior
 El paciente dorsiflexionó el pie suavemente contra resistencia y luego lo relajó, todo esto se sabe gracias a la información que nos proporciona la pagina de Physionet.
 
@@ -350,6 +351,10 @@ print(f"Media por funciones: {mediac}\n")
 print(f"Desviación estándar por funciones: {desviacionc}\n")
 print(f"coeficiente de variación con valores de las funciones: {coefi1}\n")
 ```
+![image](https://github.com/user-attachments/assets/d8df566d-9e6c-4d89-aae4-0274f17a7214)
+
+Los estadísticos muestran que la señal EMG tiene una duración de 10 segundos, con amplitudes entre -0.515 y 1.1133. Su media cercana a cero y baja varianza indican que la señal es estable, con poca dispersión y sin grandes fluctuaciones, lo que sugiere una actividad muscular baja o en reposo.
+
 - Así se graficó la señal EMG en función del tiempo:
   
 ```bash
