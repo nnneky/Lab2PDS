@@ -139,6 +139,8 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/b3fc2cbd-7c5b-45b2-8498-57e572f8a2d3)
 
+Estas convoluciones muestran cómo la señal x[n] es filtrada o transformada por el sistema descrito por h[n], lo que tiene aplicaciones en procesamiento de señales, como filtrado, detección de patrones y análisis de sistemas.
+
 ## Animar las convoluciones de forma secuencial:
 
 Para este indice de la guía se realizo una función que crea secuencialmente una serie de gráficos que ejemplifican el proceso de convolución, esto se realizo de la siguiente forma:
